@@ -87,8 +87,8 @@ def main():
     
     # API key input (optional now)
     with st.expander("Change API Key (Optional)"):
-        api_key = st.text_input("Enter your Gemini API Key", value=DEFAULT_API_KEY, type="password")
-        if api_key and api_key != DEFAULT_API_KEY:
+        api_key = st.text_input("Enter your Gemini API Key", value="", placeholder="Enter custom API key here", type="password")
+        if api_key:
             os.environ['GEMINI_API_KEY'] = api_key
     
     # Text input
