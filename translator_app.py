@@ -32,8 +32,8 @@ def translate_text(text, target_languages):
         # Configure the Gemini API
         genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
         
-        # Create a model instance
-        model = genai.GenerativeModel('gemini-pro')
+        # Create a model instance with the correct model name
+        model = genai.GenerativeModel('gemini-1.0-pro')
         
         # Prepare the prompt for translation
         prompt = f"""
