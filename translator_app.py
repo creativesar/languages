@@ -85,11 +85,7 @@ def main():
     st.title("🌐 Multilingual Translator with Voice")
     st.write("Translate English text to multiple languages with voice output")
     
-    # API key input (optional now)
-    with st.expander("Change API Key (Optional)"):
-        api_key = st.text_input("Enter your Gemini API Key", value="", placeholder="Enter custom API key here", type="password")
-        if api_key:
-            os.environ['GEMINI_API_KEY'] = api_key
+    # Remove the API key input section completely
     
     # Text input
     input_text = st.text_area("Enter English text to translate", height=150)
